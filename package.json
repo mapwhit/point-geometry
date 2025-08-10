@@ -1,6 +1,6 @@
 {
   "name": "@mapwhit/point-geometry",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Point geometry with transforms",
   "author": {
     "name": "Damian Krzeminski",
