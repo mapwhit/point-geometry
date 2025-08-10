@@ -20,7 +20,7 @@ import {
   round,
   sub,
   unit
-} from '../lib/point-geometry.js';
+} from '../lib/math.js';
 
 test('mag', t => {
   t.assert.equal(mag(from(0, 2)), 2);

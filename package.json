@@ -12,7 +12,7 @@
     "url": "git+https://github.com/mapwhit/point-geometry.git"
   },
   "type": "module",
-  "exports": "./lib/point-geometry.js",
+  "exports": "./index.js",
   "license": "ISC",
   "keywords": [
     "point-geometry",
