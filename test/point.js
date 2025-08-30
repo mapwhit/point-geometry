@@ -1,6 +1,13 @@
 import test from 'node:test';
 import { Point } from '../lib/point.js';
 
+test('Point.clone', t => {
+  const p1 = new Point(10, 20);
+  const p2 = Point.clone(p1);
+  t.assert.deepEqual(p1, p2);
+  t.assert.notEqual(p1, p2);
+});
+
 test('Point.convert', t => {
   t.assert.equal(Point.convert(new Point(20, 30)).equals(new Point(20, 30)), true);
   t.assert.equal(Point.convert([20, 30]).equals(new Point(20, 30)), true);

@@ -5,7 +5,9 @@ import {
   angleTo,
   angleWith,
   angleWithSep,
+  clone,
   dist,
+  distSqr,
   div,
   divByPoint,
   equals,
@@ -21,6 +23,20 @@ import {
   sub,
   unit
 } from '../lib/math.js';
+
+test('clone', t => {
+  const p1 = { x: 10, y: 20 };
+  const p2 = clone(p1);
+  t.assert.deepEqual(p1, p2);
+  t.assert.notEqual(p1, p2);
+});
+
+test('distSqr', t => {
+  const zero = { x: 0, y: 0 };
+  t.assert.equal(distSqr({ x: 0, y: 10 }, zero), 100);
+  t.assert.equal(Math.round(distSqr({ x: Math.sqrt(2), y: Math.sqrt(2) }, zero)), 4);
+  t.assert.equal(distSqr(zero, zero), 0);
+});
 
 test('mag', t => {
   t.assert.equal(mag(from(0, 2)), 2);
